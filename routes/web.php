@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'blog'], function () {
+Route::prefix('blog')->group(function () {
     Route::resource('/category', \App\Http\Controllers\CategoryController::class);
+    Route::resource('/post', \App\Http\Controllers\PostController::class);
 });
