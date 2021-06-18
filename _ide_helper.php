@@ -16117,6 +16117,26 @@
      
 }
 
+    namespace id_0x56\LaravelDemoPackage\Facades { 
+            /**
+     * 
+     *
+     */ 
+        class LaravelDemoPackageFacade {
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function hi()
+        {
+                        return \id_0x56\LaravelDemoPackage\Classes\LaravelDemoPackage::hi();
+        }
+         
+    }
+     
+}
+
     namespace Illuminate\Http { 
             /**
      * 
@@ -19431,6 +19451,7 @@ namespace  {
             class View extends \Illuminate\Support\Facades\View {}
             class Debugbar extends \Barryvdh\Debugbar\Facade {}
             class Flare extends \Facade\Ignition\Facades\Flare {}
+            class DemQ extends \id_0x56\LaravelDemoPackage\Facades\LaravelDemoPackageFacade {}
      
 }
 

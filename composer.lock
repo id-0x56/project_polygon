@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e4508a988e917805fe28d695d4b27bb2",
+    "content-hash": "e9a555c65ba2522c4fcafc25d07275ce",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -855,6 +855,64 @@
                 "source": "https://github.com/guzzle/psr7/tree/1.8.2"
             },
             "time": "2021-04-26T09:17:50+00:00"
+        },
+        {
+            "name": "id-0x56/laravel-demo-package",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/id-0x56/laravel-demo-package.git",
+                "reference": "d72d094a4f2eb0cd513aa108d3969f6550796c03"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/id-0x56/laravel-demo-package/zipball/d72d094a4f2eb0cd513aa108d3969f6550796c03",
+                "reference": "d72d094a4f2eb0cd513aa108d3969f6550796c03",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.18"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "id_0x56\\LaravelDemoPackage\\Providers\\LaravelDemoPackageServiceProvider"
+                    ],
+                    "aliases": {
+                        "DemQ": "id_0x56\\LaravelDemoPackage\\Facades\\LaravelDemoPackageFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "id_0x56\\LaravelDemoPackage\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "id-0x56",
+                    "email": "id.0x56@Gmail.com"
+                }
+            ],
+            "description": "Laravel demo package",
+            "keywords": [
+                "laravel",
+                "package"
+            ],
+            "support": {
+                "issues": "https://github.com/id-0x56/laravel-demo-package/issues",
+                "source": "https://github.com/id-0x56/laravel-demo-package/tree/master"
+            },
+            "time": "2021-06-18T06:59:42+00:00"
         },
         {
             "name": "laravel/framework",
@@ -8868,7 +8926,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "id-0x56/laravel-demo-package": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
