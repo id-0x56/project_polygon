@@ -27,3 +27,8 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
+
+Route::prefix('blog')->group(function () {
+    Route::resource('/category', \App\Http\Controllers\CategoryController::class);
+    Route::resource('/post', \App\Http\Controllers\PostController::class);
+});

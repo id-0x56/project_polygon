@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Actions\Post\PublishPost;
+use App\Actions\Post\UnpublishPost;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -14,10 +16,14 @@ class PostController extends Controller
      */
     public function index()
     {
+//        $post = Post::find(5);
+//        (new PublishPost())->execute($post);
+//        (new UnpublishPost())->execute($post);
+//        dump($post);
+
         $posts = Post::all();
 //        $posts = Post::find(10)->user;
 //        $posts = Post::find(10)->category;
-
         dump(__METHOD__, $posts);
     }
 
