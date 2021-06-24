@@ -19,6 +19,7 @@ class UserSeeder extends Seeder
     {
         $users = [
             [
+                'role_id' => 1,
                 'name' => 'admin',
                 'email' => 'admin@example.com',
                 'email_verified_at' => now(),
