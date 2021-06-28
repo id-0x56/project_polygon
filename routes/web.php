@@ -29,6 +29,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::prefix('blog')->group(function () {
-    Route::resource('/category', \App\Http\Controllers\CategoryController::class);
-    Route::resource('/post', \App\Http\Controllers\PostController::class);
+    Route::apiResource('/category', \App\Http\Controllers\CategoryController::class);
+    Route::apiResource('/post', \App\Http\Controllers\PostController::class);
 });
