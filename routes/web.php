@@ -32,3 +32,11 @@ Route::prefix('blog')->group(function () {
     Route::apiResource('/category', \App\Http\Controllers\CategoryController::class);
     Route::apiResource('/post', \App\Http\Controllers\PostController::class);
 });
+
+Route::get('/test', function () {
+    $user = \App\Models\User::where('id', 1)->firstOrFail();
+    dd(
+        $user->last_login_ip,
+        $user->posts,
+    );
+});
