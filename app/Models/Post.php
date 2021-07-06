@@ -18,4 +18,9 @@ class Post extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function isOwner(User $user)
+    {
+        return $this->user_id === $user->id;
+    }
 }
