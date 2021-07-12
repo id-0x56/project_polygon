@@ -19,6 +19,11 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function likes()
+    {
+        return $this->morphMany(Like::class, 'likeable');
+    }
+
     public function isOwner(User $user)
     {
         return $this->user_id === $user->id;

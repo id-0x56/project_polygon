@@ -23,4 +23,9 @@ class Category extends Model
     {
         return $this->hasMany(Post::class);
     }
+
+    public function likes()
+    {
+        return $this->morphMany(Like::class, 'likeable');
+    }
 }
